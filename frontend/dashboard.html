@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container">
+  <h2>Dashboard</h2>
+
+  <h3 id="welcomeText"></h3>
+
+  <button onclick="goToTasks()">View Tasks</button>
+  <button onclick="logout()">Logout</button>
+</div>
+
+<script>
+const token = localStorage.getItem("token");
+
+// 🔴 Protect page
+if (!token) {
+  alert("Please login first!");
+  window.location.href = "index.html";
+}
+
+// 👤 Show user info (optional)
+const user = localStorage.getItem("user");
+if (user) {
+  document.getElementById("welcomeText").innerText = "Welcome, " + user;
+}
+
+function goToTasks() {
+  window.location.href = "tasks.html";
+}
+
+function logout() {
+  localStorage.removeItem("token");
+  localStorage.removeItem("user");
+  window.location.href = "index.html";
+}
+</script>
+
+</body>
+</html>
