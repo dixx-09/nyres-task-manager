@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5000/api/auth";
+const API_URL = "https://nyres-backend.onrender.com/api/auth";
 
 // ================= LOGIN =================
 const loginForm = document.getElementById("loginForm");

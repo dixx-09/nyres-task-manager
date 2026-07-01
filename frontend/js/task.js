@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5000/api/tasks";
+const API_URL = "https://nyres-backend.onrender.com/api/tasks";
 
 // 🔐 Get token
 function getToken() {
